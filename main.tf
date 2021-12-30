@@ -26,11 +26,6 @@ resource "azurerm_kubernetes_cluster" "integrations_aks_terraform" {
     vm_size    = var.node_size
   }
   
-  service_principal {
-    client_id     = var.client_id
-    client_secret = var.client_secret
-  }
-
   identity {
     type = "SystemAssigned"
   }
